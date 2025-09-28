@@ -1,6 +1,4 @@
-# P1 - Conceptos fundamentales de PostgreSQL
 **Fecha:** 19 de septiembre del 2025
-
 **Autor:** alu0101474311@ull.edu.es (Tomás Pino Pérez)
 
 ---
