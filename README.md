@@ -1,4 +1,4 @@
 # Informes de AyDBD 25/26
 
-- [[p01.md]]
-- [[p02.md]]
+- [[P1 - Conceptos fundamentales de PostgreSQL.md]]
+- [[P2 - Modelo entidad-relacion Farmacia]]
