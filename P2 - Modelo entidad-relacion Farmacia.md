@@ -1,3 +1,4 @@
+# P2 - Modelo entidad-relación Farmacia
 **Fecha:** 24 de septiembre del 2025  
 **Autor:** [alu0101474311@ull.edu.es](mailto:alu0101474311@ull.edu.es) (Tomás Pino Pérez)
 
