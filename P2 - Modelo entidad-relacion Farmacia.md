@@ -4,7 +4,7 @@
 
 ---
 
-# 1. Diagrama Entidad/Relación Farmacia
+## 1. Diagrama Entidad/Relación Farmacia
 ```mermaid
 flowchart LR
     %% Entidades
@@ -76,9 +76,9 @@ flowchart LR
     style CMP_FechaPago stroke-dasharray: 5 5
 ```
 
-# 2. Descripción del modelo
+## 2. Descripción del modelo
 
-## 2.1. Entidades
+### 2.1. Entidades
 
 | Entidad                 |                 Atributos clave                  | Descripción                                                                                                                                               |
 | ----------------------- |:------------------------------------------------:| --------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -89,7 +89,7 @@ flowchart LR
 | **Compra (CMP)**        |                   Código (PK)                    | Fecha_compra $\le$ hoy, fecha_pago (opcional, solo crédito $\ge$ fecha_compra). FK: codigo_cliente                                                        |
 | **DetalleCompra (DET)** | PK compuesta: codigo_compra + codigo_medicamento | Unidades $\gt0$. FK: codigo_compra → CMP, codigo_medicamento → MED                                                                                        |
 
-## 2.2. Relaciones
+### 2.2. Relaciones
 
 | Relación                    | Cardinalidad | Semántica                                                                                         |
 | --------------------------- |:------------:| ------------------------------------------------------------------------------------------------- |
@@ -99,7 +99,7 @@ flowchart LR
 | Compra – DetalleCompra      |    $1:N$     | Una compra contiene varios detalles (medicamentos distintos); cada detalle pertenece a una compra |
 | Medicamento – DetalleCompra |    $1:N$     | Un medicamento puede aparecer en muchos detalles; cada detalle corresponde a un único medicamento |
 
-## 2.3. Restricciones semánticas
+### 2.3. Restricciones semánticas
 
 - **Medicamento:**
     - stock, vendidas $\ge0$
