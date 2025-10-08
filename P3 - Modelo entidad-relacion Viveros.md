@@ -14,7 +14,7 @@ flowchart LR
     PRO[Producto]
     EMP[Empleado]
     CLI[Cliente]
-	A@{ shape: flip-tri, label: "­" }
+	A@{ shape: flip-tri, label: ".­" }
 	CTP[ClienteTajinastePlus]
     PED[Pedido]
     BON[Bonificacion]
