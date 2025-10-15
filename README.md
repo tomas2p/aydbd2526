@@ -3,3 +3,4 @@
 - [P1 - Conceptos fundamentales de PostgreSQL](./P1%20-%20Conceptos%20fundamentales%20de%20PostgreSQL.md)
 - [P2 - Modelo entidad-relacion Farmacia](./P2%20-%20Modelo%20entidad-relacion%20Farmacia.md)
 - [P3 - Modelo entidad-relacion Viveros](./P3%20-%20Modelo%20entidad-relacion%20Viveros.md)
+- [P4 - Modelo relacional Viveros](./p04-modelo-viveros/P4%20-%20Modelo%20relacional%20Viveros.md)
