@@ -1,0 +1,163 @@
+Copiando archivo SQL a /tmp...
+[sudo] password for usuario: 
+Número de líneas del archivo copiado a /tmp:
+331
+Ejecutando script SQL...
+
+DROP DATABASE
+CREATE DATABASE
+You are now connected to database "viveros" as user "postgres".
+CREATE EXTENSION
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+ALTER TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE INDEX
+CREATE TABLE
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE FUNCTION
+CREATE TRIGGER
+INSERT 0 5
+INSERT 0 6
+INSERT 0 5
+INSERT 0 6
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 5
+INSERT 0 8
+INSERT 0 5
+UPDATE 5
+ id_pedido | id_cliente | id_empleado_gestor |         fecha          | total 
+-----------+------------+--------------------+------------------------+-------
+         1 |          1 |                  2 | 2024-09-10 10:00:00+00 | 27.00
+         2 |          2 |                  1 | 2024-09-11 11:00:00+00 | 23.70
+         3 |          3 |                    | 2024-08-05 09:30:00+00 | 12.50
+         4 |          4 |                  4 | 2024-10-01 14:00:00+00 | 36.40
+         5 |          5 |                  2 | 2024-09-15 12:00:00+00 |  6.00
+(5 rows)
+
+ id_vivero |    nombre     |  latitud  |  longitud  |     direccion     
+-----------+---------------+-----------+------------+-------------------
+         1 | Vivero Centro | 28.463200 | -16.254000 | Calle Principal 1
+         2 | Vivero Norte  | 28.500000 | -16.250000 | Av. Norte 10
+         3 | Vivero Sur    | 28.440000 | -16.260000 | Camino Sur 5
+         4 | Vivero Este   | 28.470000 | -16.240000 | Paseo Este 7
+         5 | Vivero Oeste  | 28.455000 | -16.270000 | Calle Oeste 2
+(5 rows)
+
+ id_zona | id_vivero |       nombre       |  latitud  |  longitud  
+---------+-----------+--------------------+-----------+------------
+       1 |         1 | Zona A             | 28.463300 | -16.254100
+       2 |         1 | Zona B             | 28.463400 | -16.253900
+       3 |         2 | Zona Norte 1       | 28.500100 | -16.249900
+       4 |         3 | Zona Sur Principal | 28.439900 | -16.260100
+       5 |         4 | Zona Este 1        | 28.470200 | -16.240100
+       6 |         5 | Zona Oeste 1       | 28.455100 | -16.269900
+(6 rows)
+
+ id_producto |    nombre     |  categoria   | precio 
+-------------+---------------+--------------+--------
+           1 | Maceta 1L     | macetas      |   1.50
+           2 | Maceta 3L     | macetas      |   2.50
+           3 | Rosal         | plantas_flor |  12.00
+           4 | Abono General | insumos      |   8.75
+           5 | Regadera      | herramientas |   6.20
+(5 rows)
+
+ id_zona_producto | id_zona | id_producto | cantidad 
+------------------+---------+-------------+----------
+                1 |       1 |           1 |      100
+                2 |       1 |           3 |       10
+                3 |       2 |           2 |       50
+                4 |       3 |           4 |       25
+                5 |       4 |           5 |       15
+                6 |       6 |           1 |       20
+(6 rows)
+
+ id_empleado | nombre | apellido |   cargo   | objetivos_venta 
+-------------+--------+----------+-----------+-----------------
+           1 | Ana    | Gómez    | Encargada |         2000.00
+           2 | Luis   | Martín   | Vendedor  |         1500.00
+           3 | Marta  | Pérez    | Técnica   |         1000.00
+           4 | Rosa   | Díaz     | Vendedora |         1500.00
+           5 | Jorge  | Silva    | Operario  |            0.00
+(5 rows)
+
+ id_empleado_zona | id_empleado | id_zona |      fecha_inicio      |       fecha_fin        
+------------------+-------------+---------+------------------------+------------------------
+                1 |           1 |       1 | 2024-01-01 08:00:00+00 | 2024-12-31 17:00:00+00
+                2 |           2 |       2 | 2024-01-01 08:00:00+00 | 2024-06-30 17:00:00+00
+                3 |           2 |       3 | 2024-07-01 08:00:00+00 | 2024-12-31 17:00:00+00
+                4 |           3 |       4 | 2023-05-01 08:00:00+00 | 2023-12-31 17:00:00+00
+                5 |           3 |       4 | 2024-01-01 08:00:00+00 | 2024-12-31 17:00:00+00
+(5 rows)
+
+ id_cliente | nombre | apellido |         email         
+------------+--------+----------+-----------------------
+          1 | Carlos | Ruiz     | c.ruiz@example.com
+          2 | Laura  | Morales  | l.morales@example.com
+          3 | Pedro  | Santos   | p.santos@example.com
+          4 | Sofia  | Lopez    | s.lopez@example.com
+          5 | Diego  | Ortega   | d.ortega@example.com
+(5 rows)
+
+ id_cliente | mes | anio 
+------------+-----+------
+          1 |   9 | 2024
+          2 |   9 | 2024
+          3 |   8 | 2024
+          4 |  10 | 2024
+          5 |   9 | 2024
+(5 rows)
+
+ id_pedido | id_cliente | id_empleado_gestor |         fecha          | total 
+-----------+------------+--------------------+------------------------+-------
+         1 |          1 |                  2 | 2024-09-10 10:00:00+00 | 27.00
+         2 |          2 |                  1 | 2024-09-11 11:00:00+00 | 23.70
+         3 |          3 |                    | 2024-08-05 09:30:00+00 | 12.50
+         4 |          4 |                  4 | 2024-10-01 14:00:00+00 | 36.40
+         5 |          5 |                  2 | 2024-09-15 12:00:00+00 |  6.00
+(5 rows)
+
+ id_pedido_item | id_pedido | id_producto | cantidad | precio_unitario 
+----------------+-----------+-------------+----------+-----------------
+              1 |         1 |           1 |       10 |            1.50
+              2 |         1 |           3 |        1 |           12.00
+              3 |         2 |           4 |        2 |            8.75
+              4 |         2 |           5 |        1 |            6.20
+              5 |         3 |           2 |        5 |            2.50
+              6 |         4 |           3 |        2 |           12.00
+              7 |         4 |           5 |        2 |            6.20
+              8 |         5 |           1 |        4 |            1.50
+(8 rows)
+
+ id_bonificacion | id_cliente | mes | anio | monto 
+-----------------+------------+-----+------+-------
+               1 |          1 |   9 | 2024 |  5.00
+               2 |          2 |   9 | 2024 |  7.50
+               3 |          3 |   8 | 2024 |  4.00
+               4 |          4 |  10 | 2024 |  6.25
+               5 |          5 |   9 | 2024 |  3.00
+(5 rows)
+
+DELETE 1
+DELETE 1
+psql:/tmp/p04-modelo-viveros.sql:310: ERROR:  update or delete on table "cliente" violates foreign key constraint "pedido_id_cliente_fkey" on table "pedido"
+DETAIL:  Key (id_cliente)=(1) is still referenced from table "pedido".
+psql:/tmp/p04-modelo-viveros.sql:315: ERROR:  update or delete on table "cliente" violates foreign key constraint "pedido_id_cliente_fkey" on table "pedido"
+DETAIL:  Key (id_cliente)=(3) is still referenced from table "pedido".
+DELETE 1
+Eliminando archivo temporal...
+Script ejecutado y archivo temporal eliminado.
