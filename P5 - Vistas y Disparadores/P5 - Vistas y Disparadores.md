@@ -4,7 +4,7 @@
 ---
 
 # Comandos útiles
-```bash
+```shell
 # Restaurar backup en tar
 sudo -u postgres createuser cliente
 sudo -u postgres pg_restore --create -d postgres -F t AlquilerPractica.tar
@@ -13,7 +13,7 @@ sudo -u postgres pg_restore --create -d postgres -F t AlquilerPractica.tar
 sudo -u postgres pg_dump -F t alquilerdvd > alquilerdvd.tar
 ```
 # Vistas de las distintas consultas
-```postgresql
+```sql
 -- view_4a_ventas_por_categoria
 CREATE OR REPLACE VIEW view_4a_ventas_por_categoria AS
 SELECT c.name AS categoria,
@@ -76,7 +76,7 @@ LEFT JOIN category c ON ((fc.category_id = c.category_id)))
 GROUP BY a.actor_id, a.first_name, a.last_name;
 ```
 # Restricciones `CHECK`
-```postgresql
+```sql
 -- En tabla payment: el importe no puede ser negativo
 ALTER TABLE payment
 ADD CONSTRAINT chk_payment_amount_positive CHECK (amount >= 0);
@@ -110,7 +110,7 @@ ALTER TABLE customer
 ADD CONSTRAINT chk_customer_email_format CHECK (email IS NULL OR email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$');
 ```
 # Explicación Trigger en la tabla `costumer`
-```postgresql
+```sql
 -- Trigger a analizar
 last_updated BEFORE UPDATE ON customer
 FOR EACH ROW EXECUTE PROCEDURE last_updated();
@@ -125,7 +125,7 @@ FOR EACH ROW EXECUTE PROCEDURE last_updated();
 **Tablas con solución similar**:  
 Generalmente todas las tablas que tienen la columna `last_update` usan este mismo trigger. En tu base de datos `alquilerdvd` se utiliza en: `actor`, `address`, `category`, `city`, `country`, `film`, `film_actor`, `film_category`, `inventory`, `language`, `rental`, `staff`, `store`.
 
-```postgresql
+```sql
 -- Consulta para verificar lo anterior
 -- Todas las tablas listadas mostrarán un trigger parecido a `last_updated`
 SELECT event_object_table AS tabla, trigger_name AS trigger
@@ -133,7 +133,7 @@ FROM information_schema.triggers
 WHERE trigger_name LIKE '%last_updated%';
 ```
 # Disparador cuando se insertó registro en tabla `film`
-```postgresql
+```sql
 -- Crear tabla para logs de inserts en film
 CREATE TABLE film_insert_log (
 film_id INT,
@@ -157,7 +157,7 @@ FOR EACH ROW
 EXECUTE FUNCTION log_film_insert();
 ```
 # Disparador cuando se eliminó registro en tabla `film`
-```postgresql
+```sql
 -- Crear tabla para logs de deletes en film
 CREATE TABLE film_delete_log (
 film_id INT,
