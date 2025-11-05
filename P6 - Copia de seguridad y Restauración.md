@@ -21,7 +21,7 @@ Se busca demostrar la capacidad de exportar, respaldar y recuperar la informaci√
 - Docker Desktop y Docker Compose instalados
 - PostgreSQL 15 (contenedor oficial)
 - Usuario: `postgres`
-- Base de datos: `clientesdb`
+- Base de datos: `clientesdb` y `biblioteca`
 - Carpeta de trabajo: `~/adbd/postgresql-backups/src`
 
 ---
